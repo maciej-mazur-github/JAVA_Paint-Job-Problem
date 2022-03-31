@@ -15,9 +15,17 @@ public class PaintJob {
 
     }
 
+    public static int getBucketCount(double width, double height, double areaPerBucket) {
+        return getBucketCount(width, height, areaPerBucket, 0);
+    }
+
     public static void main(String[] args) {
         System.out.println(getBucketCount(-3.4, 2.1, 1.5, 2));
         System.out.println(getBucketCount(3.4, 2.1, 1.5, 2));
         System.out.println(getBucketCount(2.75, 3.25, 2.5, 1));
+        System.out.println("**********************************");
+        System.out.println(getBucketCount(-3.4, 2.1, 1.5));
+        System.out.println(getBucketCount(3.4, 2.1, 1.5));
+        System.out.println(getBucketCount(7.25, 4.3, 2.35));
     }
 }
